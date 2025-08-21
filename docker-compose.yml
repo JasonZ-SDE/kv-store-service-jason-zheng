@@ -1,0 +1,26 @@
+services:
+  kv-service:
+    build: ./kv-service
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  test-client:
+    build: ./test-client
+    ports:
+      - "8001:8001"
+    environment:
+      - KV_SERVICE_URL=http://kv-service:8000
+    depends_on:
+      - kv-service
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
