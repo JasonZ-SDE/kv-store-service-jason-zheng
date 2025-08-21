@@ -406,9 +406,6 @@ kv-store-service/
 │
 ├── docker-compose.yml      # Multi-service orchestration
 ├── Makefile               # Build automation
-├── CLAUDE.md             # Development guidance
-├── TASK.md              # Project task tracking
-├── PRD.md              # Product requirements
 └── README.md          # This file
 ```
 
