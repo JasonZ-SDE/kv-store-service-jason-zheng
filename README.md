@@ -29,7 +29,7 @@ A microservices-based key-value store built with FastAPI, featuring a main stora
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/JasonZ-SDE/kv-store-service.git
+   git clone https://github.com/JasonZ-SDE/kv-store-service-jason-zheng.git
    cd kv-store-service
    ```
 
